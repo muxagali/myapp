@@ -1,30 +1,16 @@
 import React from 'react';
-import './App.css';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Hello world</h1>
-      <Footer />
+      <Main />
     </div>
   );
 }
 
-const Header = () => {
-  return (
-    <div className="header">
-      <h1>This is Header component</h1>
-    </div>
-  )
-}  
 
-const Footer = () => {
-  return (
-    <div className="footer">
-      <h1>This is Footer component</h1>
-    </div>
-  )
-}  
 
 export default App;

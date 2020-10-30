@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.83);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px black;
+}
+
+.introHeader {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+}
+.logo a {
+  font-family: 'Comfortaa', cursive;
+}
+
+
+/* Project menu and authorizations */
+.projectMenu, .auth {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================== */
+.projectMenu a, .auth a {
+  font-weight: lighter;
+  font-size: 12px;
+  display: block;
+  margin: 0 5px;
+  color: silver;
+  transition: all .3s;
+}
+.projectMenu a:hover, .auth a i:hover { color: white; }
+
+/* ====================== */
+.auth a i {
+  color: silver;
+  transition: all .3s;
+}
