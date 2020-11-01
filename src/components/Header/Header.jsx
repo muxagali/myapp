@@ -1,4 +1,5 @@
 import React from 'react';
+import  { NavLink }  from 'react-router-dom';
 import header from './header.module.css';
 
 
@@ -10,7 +11,7 @@ const Header = () => {
                 {/* Logotype */}
                 {/* ========================== */}
                 <div className={header.logo}>
-                    <a href="">aBay <small>st</small></a>
+                    <a href="/">aBay <small>st</small></a>
                 </div>
 
                 {/* Projects menu */}
@@ -25,7 +26,7 @@ const Header = () => {
 
                 {/* Authorization */}
                 <div className={header.auth}>
-                    <a href="" title="Авторизация или Регистрация"><i className="far fa-user"></i></a>
+                    <NavLink to="/login"><i className="far fa-user"></i></NavLink>
                     <a href="" title="Закладки"><i className="far fa-heart"></i></a>
                     <a href="" title="Увидомление"><i className="far fa-bell"></i></a>
                 </div>
