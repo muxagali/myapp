@@ -3,7 +3,6 @@
     width: 100%;
     bottom: 0;
     padding-top: 5px;
-    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.041);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 3px #333;
@@ -17,7 +16,7 @@
     font-weight: lighter;
     margin: 5px 15px;
     transition: transform .3s;
-    text-align: center;
+    align-items: center;
     border-bottom: 2px solid transparent;
 }
 
@@ -25,16 +24,15 @@
     border-bottom: 2px solid crimson;
 }
 
-.Menu a i {
-    font-size: 24px;
+.Menu a img {
+    width: 24px;
     display: inline-block;
-    color: black;
     transition: transform .2s;
 }
-.Menu a:hover > i {
+
+.Menu a:hover > img {
     transform: rotate(-20deg);
 }
-
 
 
 .Menu a small {

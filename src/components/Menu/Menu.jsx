@@ -1,37 +1,45 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import menu from './menu.module.css';
+import plane from '../../img/send.png'
+import search from '../../img/search.png'
+import news from '../../img/news.png'
+import product from '../../img/shopping-cart.png'
+import settings from '../../img/settings.png'
+import company from '../../img/company.png'
+import user from '../../img/user.png'
+
 
 const Menu = () => {
     return (
         <div className={menu.Menu}>
+            <NavLink to="/news" activeClassName={menu.menuActive}>
+                <img src={news} alt="" />
+                <small>Новости</small>
+            </NavLink>
             <NavLink to="/messages" activeClassName={menu.menuActive}>
-                <i className="far fa-paper-plane"></i>
+                <img src={plane} alt="" />
                 <small>Сообщение</small>
             </NavLink>
-            <NavLink to="/lists" activeClassName={menu.menuActive}>
-                <i className="far fa-list-alt"></i>
-                <small>Список</small>
-            </NavLink>
-            <NavLink to="/hospital" activeClassName={menu.menuActive}>
-                <i className="far fa-hospital"></i>
-                <small>Госпиталь</small>
+            <NavLink to="/product" activeClassName={menu.menuActive}>
+                <img src={product} alt="" />
+                <small>Продукты</small>
             </NavLink>
             <NavLink to="/clock" activeClassName={menu.menuActive}>
-                <i className="far fa-clock"></i>
-                <small>Часы</small>
+                <img src={search} alt=""/>
+                <small>Поиск</small>
             </NavLink>
-            <NavLink to="/folders" activeClassName={menu.menuActive}>
-                <i className="far fa-folder-open"></i>
-                <small>Файлы</small>
-            </NavLink>
-            <NavLink to="/authors" activeClassName={menu.menuActive}>
-                <i className="far fa-user-circle"></i>
-                <small>Авторы</small>
+            <NavLink to="/users" activeClassName={menu.menuActive}>
+                <img src={user} alt="users-image" />
+                <small>Люди</small>
             </NavLink>
             <NavLink to="/companies" activeClassName={menu.menuActive}>
-                <i className="far fa-building"></i>
+                <img src={company} alt="companies-image" />
                 <small>Компании</small>
+            </NavLink>
+            <NavLink to="/settings" activeClassName={menu.menuActive}>
+                <img src={settings} alt="settings-image" />
+                <small>Настройки</small>
             </NavLink>
         </div>
     )
