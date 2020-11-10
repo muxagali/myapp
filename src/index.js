@@ -4,9 +4,11 @@ import "./css/index.css";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import data from './data.json';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App data={data} />
   </React.StrictMode>,
   document.getElementById('root')
 );

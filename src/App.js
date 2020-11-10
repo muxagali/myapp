@@ -12,7 +12,10 @@ import Product from './components/Main/Products/Products';
 import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany';
 
 
-function App() {
+
+
+function App(props) {
+  console.log(props);
   return (
     <div className="App">
       <BrowserRouter>
@@ -20,22 +23,21 @@ function App() {
         <Header />
 
         {/* Routing here... */}
-          <Route path="/" component={Main} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          <Route path="/" render={ () => <Main />} />
+          <Route path="/login" render={ () => <Login />} />
+          <Route path="/register" render={ () => <Register /> } />
           
-          <Route path="/messages" component={Messages} />
-          <Route path="/news" component={News} />
-          <Route path="/product" component={Product} />
-          <Route path="/users" component={Users} />
-          <Route path="/companies" component={Company} />
+          <Route path="/messages" render={ () => <Messages /> } />
+          <Route path="/news" render={ () => <News /> } />
+          <Route path="/product" render={ () => <Product /> }/>
+          <Route path="/users" render={ () => <Users /> } />
+          <Route path="/companies" render={() => <Company /> } />
         {/* Menu here regular component */}
         <Menu />
       </BrowserRouter>
     </div>
   );
 }
-
 
 
 export default App;

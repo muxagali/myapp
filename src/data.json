@@ -1,0 +1,28 @@
+{
+    "users": {
+        "mukhagaliaryn": {
+            "name": "Mukhagali",
+            "age": 20,
+            "country": "Kazahstan"
+        },
+        "nurdaylet": {
+            "name": "Nurdaylet",
+            "age": 20,
+            "country": "Kazahstan" 
+        },
+        "dauletdana": {
+            "name": "Dana",
+            "age": 19,
+            "country": "Kazahstan" 
+        },
+        "guluryergara": {
+            "name": "Gulnur",
+            "age": 19,
+            "country": "Kazahstan" 
+        } 
+    },
+
+    "companies": {
+        
+    }
+}
