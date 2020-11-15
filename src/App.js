@@ -15,6 +15,7 @@ import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany'
 
 
 function App(props) {
+  console.log(props);
   return (
     <div className="App">
       <BrowserRouter>
@@ -22,21 +23,22 @@ function App(props) {
         <Header />
 
         {/* Routing here... */}
-          <Route path="/" render={ () => <Main />} />
-          <Route path="/login" render={ () => <Login />} />
-          <Route path="/register" render={ () => <Register /> } />
+          <Route path="/" render={() => <Main/>}/>
+          <Route path="/login" render={() => <Login/>}/>
+          <Route path="/register" render={() => <Register/>}/>
           
-          <Route path="/messages" render={ () => <Messages /> } />
-          <Route path="/news" render={ () => <News /> } />
-          <Route path="/product" render={ () => <Product /> }/>
-          <Route path="/users" render={ () => <Users users={props.data[0]} /> } />
-          <Route path="/companies" render={() => <Company companies={props.data[1]} /> } />
+          <Route path="/messages" render={() => <Messages/>}/>
+          <Route path="/news" render={() => <News/>}/>
+          <Route path="/product" render={() => <Product/>}/>
+          <Route path="/users" render={() => <Users users={props.data.users} />}/>
+          <Route path="/companies" render={() => <Company companies={props.data.companies} />}/>
+        {/* ...... */}
+
         {/* Menu here regular component */}
         <Menu />
       </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;
