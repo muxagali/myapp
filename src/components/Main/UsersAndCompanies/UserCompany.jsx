@@ -2,7 +2,7 @@ import React from 'react';
 import main from '../main.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Users = () => {
+const Users = (props) => {
     return (
         <div className={main.usersContainer}>
             <div className={main.closeBtn}>
@@ -23,12 +23,20 @@ const Users = () => {
             {/* Main message block */}
             <div className={main.users}>
                 <h1>Люди</h1>
+                <div className={main.usersBlock}>
+                    {props.users.map(user => 
+                    <div key={user.id} className={main.userBox}>
+                        <h2>{user.name}</h2>
+                        <p>{user.age}</p>
+                        <p>{user.country}</p>
+                    </div>)}
+                </div>
             </div>
         </div>
     )
 }
 
-const Company = () => {
+const Company = (props) => {
     return (
         <div className={main.companiesContainer}>
             <div className={main.closeBtn}>
@@ -49,6 +57,13 @@ const Company = () => {
             {/* Main message block */}
             <div className={main.companies}>
                 <h1>Компании</h1>
+                <div className={main.companyBlock}>
+                    {props.companies.map(company =>
+                    <div key={company.id} className={main.companyBox}>
+                        <h1>{company.name}</h1>
+                        <p>{company.resource}</p>
+                    </div>)}
+                </div>
             </div>
         </div>
     )

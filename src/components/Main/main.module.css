@@ -93,3 +93,21 @@
     text-align: center;
 }
 
+
+/* Users box */
+.usersBlock, .companyBlock {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userBox, .companyBox {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+.userBox *, .companyBox * {
+    color: black;
+}
+

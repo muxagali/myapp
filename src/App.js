@@ -15,7 +15,6 @@ import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany'
 
 
 function App(props) {
-  console.log(props);
   return (
     <div className="App">
       <BrowserRouter>
@@ -30,8 +29,8 @@ function App(props) {
           <Route path="/messages" render={ () => <Messages /> } />
           <Route path="/news" render={ () => <News /> } />
           <Route path="/product" render={ () => <Product /> }/>
-          <Route path="/users" render={ () => <Users /> } />
-          <Route path="/companies" render={() => <Company /> } />
+          <Route path="/users" render={ () => <Users users={props.data[0]} /> } />
+          <Route path="/companies" render={() => <Company companies={props.data[1]} /> } />
         {/* Menu here regular component */}
         <Menu />
       </BrowserRouter>
