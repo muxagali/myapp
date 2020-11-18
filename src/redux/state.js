@@ -35,6 +35,23 @@ const state = {
           "name": "kaspikz",
           "resource": "bank"
         }
+    ],
+    messages: [
+      {
+        "id": 1,
+        "body": "This is my first message in today!",
+        "timestamp": new Date()
+      },
+      {
+        "id": 2,
+        "body": "This is my second message in today!",
+        "timestamp": new Date()
+      },
+      {
+        "id": 3,
+        "body": "This is my thirds message in today!",
+        "timestamp": new Date()
+      },
     ]
 }
 

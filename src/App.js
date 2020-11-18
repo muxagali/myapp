@@ -12,8 +12,6 @@ import Product from './components/Main/Products/Products';
 import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany';
 
 
-
-
 function App(props) {
   console.log(props);
   return (
@@ -27,7 +25,7 @@ function App(props) {
           <Route path="/login" render={() => <Login/>}/>
           <Route path="/register" render={() => <Register/>}/>
           
-          <Route path="/messages" render={() => <Messages/>}/>
+          <Route path="/messages" render={() => <Messages messages={props.data.messages}/>}/>
           <Route path="/news" render={() => <News/>}/>
           <Route path="/product" render={() => <Product/>}/>
           <Route path="/users" render={() => <Users users={props.data.users} />}/>
