@@ -12,12 +12,12 @@ const Users = (props) => {
             <div className={main.navMenu}>
                 <h2>Люди</h2>
                 <ul>
-                    <li><a href="">Аккаунт</a></li>
-                    <li><a href="">Демо</a></li>
-                    <li><a href="">Фраза</a></li>
-                    <li><a href="">Котировка</a></li>
-                    <li><a href="">Расширение</a></li>
-                    <li><a href="">Редактировать</a></li>
+                    <li><a href="/">Аккаунт</a></li>
+                    <li><a href="/">Демо</a></li>
+                    <li><a href="/">Фраза</a></li>
+                    <li><a href="/">Котировка</a></li>
+                    <li><a href="/">Расширение</a></li>
+                    <li><a href="/">Редактировать</a></li>
                 </ul>
             </div>
             {/* Main message block */}
@@ -46,12 +46,12 @@ const Company = (props) => {
             <div className={main.navMenu}>
                 <h2>Компании</h2>
                 <ul>
-                    <li><a href="">Аккаунт</a></li>
-                    <li><a href="">Демо</a></li>
-                    <li><a href="">Фраза</a></li>
-                    <li><a href="">Котировка</a></li>
-                    <li><a href="">Расширение</a></li>
-                    <li><a href="">Редактировать</a></li>
+                    <li><a href="/">Аккаунт</a></li>
+                    <li><a href="/">Демо</a></li>
+                    <li><a href="/">Фраза</a></li>
+                    <li><a href="/">Котировка</a></li>
+                    <li><a href="/">Расширение</a></li>
+                    <li><a href="/">Редактировать</a></li>
                 </ul>
             </div>
             {/* Main message block */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Router} from 'react-router-dom'
+import {BrowserRouter, Route } from 'react-router-dom'
 
 // Importing components...
 import Header from './components/Header/Header';
@@ -13,7 +13,6 @@ import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany'
 
 
 function App(props) {
-  console.log(props);
   return (
     <div className="App">
       <BrowserRouter>

@@ -4,6 +4,14 @@ import auth from './auth.module.css';
 
 
 const Login = () => {
+    let username = React.createRef()
+    let password = React.createRef()
+
+    const showData = (e) => {
+        e.preventDefault()
+        alert(`login: ${username.current.value}\npassword: ${password.current.value}`)
+    }
+
     return (
         <div className={auth.loginContainer}>
             <div className={auth.closeBtn}>
@@ -11,15 +19,15 @@ const Login = () => {
             </div>
             <div className={auth.login}>
                 <h1>Войти в систему</h1>
-                <form action="">
+                <form action="" method="POST">
                     <div className={auth.formControl}>
-                        <input type="text" name="" id="" placeholder="Введите логин..." />
+                        <input type="text" name="" ref={username} id="username" placeholder="Введите логин..." />
                     </div>
                     <div className={auth.formControl}>
-                        <input type="password" name="password" id="" placeholder="Пароль..." />
+                        <input type="password" name="password" ref={password} id="password" placeholder="Пароль..." />
                     </div>
                     <div className={auth.formControl}>
-                        <button type="submit">Войти</button>
+                        <button type="submit" onClick={showData}>Войти</button>
                     </div>
                 </form>
                 <NavLink to="/register" className={auth.LinkToRegister}>Регистрация</NavLink>

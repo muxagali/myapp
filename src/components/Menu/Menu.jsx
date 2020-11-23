@@ -30,15 +30,15 @@ const Menu = () => {
                 <small>Поиск</small>
             </NavLink>
             <NavLink to="/users" activeClassName={menu.menuActive}>
-                <img src={user} alt="users-image" />
+                <img src={user} alt="" />
                 <small>Люди</small>
             </NavLink>
             <NavLink to="/companies" activeClassName={menu.menuActive}>
-                <img src={company} alt="companies-image" />
+                <img src={company} alt="" />
                 <small>Компании</small>
             </NavLink>
             <NavLink to="/settings" activeClassName={menu.menuActive}>
-                <img src={settings} alt="settings-image" />
+                <img src={settings} alt="" />
                 <small>Настройки</small>
             </NavLink>
         </div>
