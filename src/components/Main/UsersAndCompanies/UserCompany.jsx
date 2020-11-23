@@ -26,9 +26,10 @@ const Users = (props) => {
                 <div className={main.usersBlock}>
                     {props.users.map(user => 
                     <div key={user.id} className={main.userBox}>
-                        <h2>{user.name}</h2>
-                        <p>{user.age}</p>
-                        <p>{user.country}</p>
+                        <h2>{user.username}</h2>
+                        <h4>{user.first_name} {user.last_nmae}</h4>
+                        <p>{user.email}</p>
+                        <p>{user.password}</p>
                     </div>)}
                 </div>
             </div>

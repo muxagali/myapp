@@ -36,7 +36,22 @@ const Login = () => {
     )
 } 
 
-const Register = () => {
+const Register = (props) => {
+    let username = React.createRef()
+    let first_name = React.createRef()
+    let last_name = React.createRef()
+    let email = React.createRef()
+    let password = React.createRef()
+    
+    let addPost = (e) => {
+        e.preventDefault()
+        props.createUser(username.current.value, first_name.current.value, last_name.current.value, email.current.value, password.current.value)
+        username.current.value = ''
+        first_name.current.value = ''
+        last_name.current.value = ''
+        email.current.value = ''
+        password.current.value = ''
+    }
     return (
         <div className={auth.registerContainer}>
             <div className={auth.closeBtn}>
@@ -46,22 +61,22 @@ const Register = () => {
                 <h1>Регистрация</h1>
                 <form action="">
                     <div className={auth.formControl}>
-                        <input type="text" name="" id="" placeholder="Введите логин..." />
+                        <input type="text" name="" id="username" ref={username} placeholder="Введите логин..." />
                     </div>
                     <div className={auth.formControl}>
-                        <input type="text" name="first_name" id="" placeholder="Ваше имя" />
+                        <input type="text" name="first_name" ref={first_name} id="first_name" placeholder="Ваше имя" />
                     </div>
                     <div className={auth.formControl}>
-                        <input type="text" name="last_name" id="" placeholder="Ваше фамилия" />
+                        <input type="text" name="last_name" ref={last_name} id="last_name" placeholder="Ваше фамилия" />
                     </div>
                     <div className={auth.formControl}>
-                        <input type="email" name="email" id="" placeholder="example@gmail.com" />
+                        <input type="email" name="email" ref={email} id="email" placeholder="example@gmail.com" />
                     </div>
                     <div className={auth.formControl}>
-                        <input type="password" name="password" id="" placeholder="Придумаете пароль" />
+                        <input type="password" name="password" ref={password} id="password" placeholder="Придумаете пароль" />
                     </div>
                     <div className={auth.formControl}>
-                        <button type="submit">Отправить</button>
+                        <button type="submit" onClick={addPost}>Отправить</button>
                     </div>
                 </form>
                 <NavLink to="/login" className={auth.linkToLogin}>У вас есть аккаунт?</NavLink>

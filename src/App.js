@@ -21,8 +21,8 @@ function App(props) {
 
         {/* Routing here... */}
           <Route path="/" render={() => <Main/>}/>
-          <Route path="/login" render={() => <Login/>}/>
-          <Route path="/register" render={() => <Register/>}/>
+          <Route path="/login" render={() => <Login />}/>
+          <Route path="/register" render={() => <Register createUser={props.createUser} />}/>
           
           <Route path="/messages" render={() => <Messages messages={props.data.messages}/>}/>
           <Route path="/news" render={() => <News/>}/>

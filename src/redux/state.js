@@ -1,22 +1,30 @@
+import { rerenderEntireTree } from "../render"
+
 const state = {
     users: [
         {
           "id": 1,
-          "name": "Mukhagali Aryn",
-          "age": 20,
-          "country": "Kazakhstan"
+          "username": "mukhagali",
+          "first_name": "Mukhagali",
+          "last_name": "Aryn",
+          "email": "axumilize@gmail.com",
+          "password": "arynov00"
         },
         {
           "id": 2,
-          "name": "Qadyr Ali",
-          "age": 20,
-          "country": "USA"
+          "username": "qadyraly",
+          "first_name": "Qadyr ",
+          "last_name": "Ali",
+          "email": "qadyr@gmail.com",
+          "password": "123456789"
         },
         {
           "id": 3,
-          "name": "Nurdaylet Dikhanbay",
-          "age": 20,
-          "country": "Uzbekistan"
+          "username": "nur2000",
+          "first_name": "Nurdaylet",
+          "last_name": "Dikhanbay",
+          "email": "dado@gmail.com",
+          "password": "Nur2000"
         }
     ],
     companies: [
@@ -53,6 +61,19 @@ const state = {
         "timestamp": new Date()
       },
     ]
+}
+
+export const createUser = (username, first_name, last_name, email, password) => {
+  let user = {
+    "id": 4,
+    "username": username,
+    "first_name": first_name,
+    "last_name": last_name,
+    "email": email,
+    "password": password
+  }
+  state.users.push(user)
+  rerenderEntireTree(state)
 }
 
 export default state
