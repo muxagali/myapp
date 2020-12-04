@@ -45,7 +45,15 @@ const Register = (props) => {
     
     let addPost = (e) => {
         e.preventDefault()
-        props.createUser(username.current.value, first_name.current.value, last_name.current.value, email.current.value, password.current.value)
+        const action = {
+            'type': 'CREATE_USER', 
+            'username': username.current.value,
+            'first_name': first_name.current.value,
+            'last_name': last_name.current.value,
+            'email': email.current.value,
+            'password': password.current.value,
+        }
+        props.dispatch(action)
         username.current.value = ''
         first_name.current.value = ''
         last_name.current.value = ''

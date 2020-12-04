@@ -13,6 +13,7 @@ import { Users, Company } from './components/Main/UsersAndCompanies/UserCompany'
 
 
 function App(props) {
+  console.log(props);
   return (
     <div className="App">
       <BrowserRouter>
@@ -22,7 +23,7 @@ function App(props) {
         {/* Routing here... */}
           <Route path="/" render={() => <Main/>}/>
           <Route path="/login" render={() => <Login />}/>
-          <Route path="/register" render={() => <Register createUser={props.createUser} />}/>
+          <Route path="/register" render={() => <Register dispatch={props.dispatch} />}/>
           
           <Route path="/messages" render={() => <Messages messages={props.data.messages}/>}/>
           <Route path="/news" render={() => <News/>}/>
