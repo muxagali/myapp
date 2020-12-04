@@ -69,9 +69,6 @@ let store = {
   subscribe(observer) {
     this.rerenderEntireTree = observer
   },
-  // createUser (username, first_name, last_name, email, password) {
-   
-  // },
 
   dispatch(action) {
     if (action.type === "CREATE_USER") {
