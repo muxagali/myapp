@@ -1,4 +1,4 @@
-import { rerenderEntireTree } from "../render"
+let rerenderEntireTree = () => {}
 
 const state = {
     users: [
@@ -74,6 +74,10 @@ export const createUser = (username, first_name, last_name, email, password) => 
   }
   state.users.push(user)
   rerenderEntireTree(state)
+}
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer
 }
 
 export default state

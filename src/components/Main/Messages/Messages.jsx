@@ -26,7 +26,7 @@ const Messages = (props) => {
                 <div className="messages-block">
                     <ul className="messages">
                         {props.messages.map(msg =>
-                            <div className={main.messageBox}>
+                            <div className={main.messageBox} key={msg.id}>
                                 <p>{msg.body}</p>
                             </div>
                         )}
